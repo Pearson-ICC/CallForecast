@@ -40,9 +40,10 @@ def filterByDate(data: pd.DataFrame, date: datetime) -> pd.DataFrame:
     return data[data["date"] == date]
 
 
-def perform_curved_regression_prediction() -> pd.DataFrame:
+def broken_performPredictionAndMakeCoolGraph() -> pd.DataFrame:
     """
     Returns a DataFrame with the FORECAST for the next 30 minutes.
+    !!!! THIS is the broken bit !!!!
     """
     data: pd.DataFrame = findNumberOfCallsPerHalfHour(getData())
     data: pd.DataFrame = data.reset_index()
@@ -91,4 +92,4 @@ def perform_curved_regression_prediction() -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    print(perform_curved_regression_prediction())
+    print(broken_performPredictionAndMakeCoolGraph())
